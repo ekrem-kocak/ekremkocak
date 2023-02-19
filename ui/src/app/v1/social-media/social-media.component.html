@@ -1,0 +1,22 @@
+<div class="main-container">
+  <h1 class="tw-info w-75 text-center" #twinfo></h1>
+
+  <div class="row social-media-container">
+    <div
+      class="col-md-2 col-4 mb-md-0 mb-4 d-flex justify-content-center"
+      *ngFor="let mediaItem of socialMedia"
+    >
+      <a
+        class="social-icon"
+        [ngClass]="'social-icon' + mediaItem.class"
+        [href]="mediaItem.url"
+        target="_blank"
+      >
+        <i [ngClass]="mediaItem.icon"></i>
+        <div class="tooltip">{{ mediaItem.tooltipContent }}</div>
+      </a>
+    </div>
+  </div>
+
+  <h2 class="tw-about w-75" #twabout></h2>
+</div>

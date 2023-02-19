@@ -1,0 +1,42 @@
+{
+  "socailMediaData": [
+    {
+      "url": "https://www.linkedin.com/in/ekremkocak/",
+      "class": "--linkedin",
+      "icon": "fa-brands fa-linkedin",
+      "tooltipContent": "LinkedIn"
+    },
+    {
+      "url": "https://github.com/ekrem-kocak",
+      "class": "--github",
+      "icon": "fa-brands fa-github",
+      "tooltipContent": "Github"
+    },
+    {
+      "url": "https://stackoverflow.com/users/13545243/ekremkocak",
+      "class": "--stackoverflow",
+      "icon": "fa-brands fa-stack-overflow",
+      "tooltipContent": "Stackoverflow"
+    },
+    {
+      "url": "https://codepen.io/ekrem-kocak",
+      "class": "--codepen",
+      "icon": "fa-brands fa-codepen",
+      "tooltipContent": "Codepen"
+    },
+    {
+      "url": "https://www.hackerrank.com/ekrem_kocak",
+      "class": "--hackerrank",
+      "icon": "fa-brands fa-hackerrank",
+      "tooltipContent": "HackerRank"
+    },
+    {
+      "url": "https://www.instagram.com/ekremkocak",
+      "class": "--instagram",
+      "icon": "fa-brands fa-instagram",
+      "tooltipContent": "Instagram"
+    }
+  ],
+  "infoMessage": "We're just getting started - more to come soon!",
+  "aboutMessage": "<p>Hi, I'm Ekrem Koçak, a passionate frontend developer. I'm very confident in my skills with Angular and have a solid understanding of React as well. Additionally, I have a keen interest in backend development and have had some experience with ASP .NET Core Web API.</p><p>My enthusiasm for technology and design drives me to constantly learn and improve. I approach each project with a dedication to delivering high-quality work that exceeds expectations. I enjoy collaborating with others and am always willing to share my knowledge and expertise to help the team achieve the best results possible.</p><p>In summary, I am an experienced and skilled frontend developer with a growing interest in backend development. My passion for technology, dedication to quality, and collaborative nature make me an asset to any team.</p>"
+}
