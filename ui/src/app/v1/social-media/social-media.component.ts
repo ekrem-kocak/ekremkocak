@@ -11,7 +11,7 @@ import Typewriter from 't-writer.js';
 })
 export class SocialMediaComponent {
   @ViewChild('twinfo') infoElement: any;
-  @ViewChild('twabout') aboutMeElement: any;
+  // @ViewChild('twabout') aboutMeElement: any;
 
   socialMedia: SocialMedia[] | null = null;
   infoMessage: string | null = null;
@@ -30,7 +30,6 @@ export class SocialMediaComponent {
 
   startTyping() {
     const infoTarget = this.infoElement.nativeElement;
-    const aboutTarget = this.aboutMeElement.nativeElement;
 
     const writer = new Typewriter(infoTarget, {
       loop: true,
@@ -38,16 +37,7 @@ export class SocialMediaComponent {
       cursorColor: '#fff',
     });
 
-    const writer1 = new Typewriter(aboutTarget, {
-      loop: false,
-      typeColor: '#fff',
-      cursorColor: '#fff',
-      typeSpeed: 35,
-    });
-
     writer.type(this.infoMessage).rest(5000).start();
-
-    writer1.type(this.aboutMeMessage).start();
   }
 
   getData(): Observable<Data> {
