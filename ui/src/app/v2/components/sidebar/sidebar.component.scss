@@ -84,9 +84,14 @@ nav {
       }
       a {
         font-size: 1.1rem;
-        color: $primary;
+        color: $text-color;
         text-transform: capitalize;
         text-decoration: none;
+        transition: all 0.25s ease;
+
+        &:hover {
+          color: $primary;
+        }
 
         @media screen and (max-width: $xl) {
           font-size: 1rem;
@@ -121,6 +126,10 @@ nav {
           align-items: center;
           justify-content: center;
 
+          i {
+            font-size: 1.2rem;
+          }
+
           @media screen and (max-width: $xl) {
             padding: 0;
           }
@@ -130,6 +139,7 @@ nav {
     h6 {
       margin-top: 2rem;
       text-align: center;
+      line-height: 2rem;
       @media screen and (max-width: $xl) {
         font-size: 0.8rem;
       }
