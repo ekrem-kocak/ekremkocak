@@ -1,0 +1,156 @@
+@import "src/styles/colors.scss";
+@import "src/styles/breakpoints.scss";
+
+$border-color: rgba(85, 82, 124, 0.1);
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 0;
+  overflow: hidden;
+  min-height: 100vh;
+  width: 370px;
+  border-right: 1px solid $border-color;
+
+  .navbar-brand-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    img {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border: 2px solid $primary;
+
+      @media screen and (max-width: $xl) {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    .name-container {
+      width: 100%;
+      text-align: center;
+      position: relative;
+
+      .name {
+        position: relative;
+        font-weight: 500;
+        font-weight: 700;
+        font-size: 1.5rem;
+
+        @media screen and (max-width: $xl) {
+          font-size: 1rem;
+        }
+      }
+
+      &::before {
+        content: "Ekrem Koçak";
+        font-family: "Kristi", cursive;
+        font-style: italic;
+        color: rgba(19, 15, 73, 0.07);
+        font-size: 5rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+
+        @media screen and (max-width: $xl) {
+          font-size: 3rem;
+        }
+      }
+    }
+
+    .name {
+      position: relative;
+      font-weight: 500;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+  }
+
+  ul.navbar-nav-container {
+    text-align: center;
+
+    li {
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+      a {
+        font-size: 1.1rem;
+        color: $primary;
+        text-transform: capitalize;
+        text-decoration: none;
+
+        @media screen and (max-width: $xl) {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    @media screen and (max-width: $xl) {
+      width: 100%;
+      padding-right: 1.2rem !important;
+      text-align: right;
+    }
+  }
+
+  .navbar-footer {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+
+    ul {
+      display: flex;
+      justify-content: space-evenly;
+
+      li {
+        a {
+          border-radius: 50%;
+          aspect-ratio: 1/1;
+          background-color: $secondary;
+          color: $dark;
+          padding: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          @media screen and (max-width: $xl) {
+            padding: 0;
+          }
+        }
+      }
+    }
+    h6 {
+      margin-top: 2rem;
+      text-align: center;
+      @media screen and (max-width: $xl) {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: $xxl) {
+    width: 300px;
+  }
+
+  @media screen and (max-width: $xl) {
+    border: none;
+    width: 200px;
+    position: absolute;
+    right: 0;
+    transform: translateX(200px);
+    transition: all 0.4s ease-in-out;
+    padding-bottom: 6rem;
+
+    &.show {
+      transform: translateX(0);
+    }
+  }
+}
