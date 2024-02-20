@@ -6,9 +6,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgxsModule } from '@ngxs/store';
+import { CursorComponent } from './shared/components/cursor/cursor.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, CursorComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
