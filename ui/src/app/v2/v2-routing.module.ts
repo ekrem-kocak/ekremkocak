@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomepageComponent } from './components/homepage/homepage.component';
 
 const routes: Routes = [
   {
@@ -8,6 +9,7 @@ const routes: Routes = [
       import('./components/layout/layout.component').then(
         (c) => c.LayoutComponent
       ),
+    children: [{ path: '', component: HomepageComponent }],
   },
 ];
 

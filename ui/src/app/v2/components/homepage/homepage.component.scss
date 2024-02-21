@@ -1,0 +1,52 @@
+@import "src/styles/colors.scss";
+@import "src/styles/breakpoints.scss";
+$background: #effbf8;
+
+.hompage-container {
+  min-height: 100vh;
+  background-color: $background;
+  display: flex;
+  align-items: center;
+
+  .inner {
+    padding: 10rem;
+
+    p {
+      color: $dark;
+      font-weight: 700;
+      font-size: 3rem;
+    }
+
+    .btn {
+      transition: all 0.4s ease-in-out;
+      width: 50%;
+      &:hover {
+        background-color: transparent !important;
+        color: $dark;
+      }
+    }
+
+    @media screen and (max-width: $xxl) {
+      padding: 4rem;
+    }
+
+    @media screen and (max-width: $xl) {
+      padding: 1rem;
+
+      p {
+        font-size: 2.5rem;
+      }
+
+      img {
+        margin-bottom: 1rem;
+        max-height: 200px;
+      }
+    }
+
+    @media screen and (max-width: $sm) {
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}

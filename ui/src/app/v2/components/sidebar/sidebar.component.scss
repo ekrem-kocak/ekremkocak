@@ -158,6 +158,8 @@ nav {
     transform: translateX(200px);
     transition: all 0.4s ease-in-out;
     padding-bottom: 6rem;
+    background-color: #fff;
+    z-index: 10;
 
     &.show {
       transform: translateX(0);

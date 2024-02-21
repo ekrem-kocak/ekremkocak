@@ -19,10 +19,10 @@ import { RouterModule } from '@angular/router';
         <app-mobile-top-navbar></app-mobile-top-navbar>
       </div>
       <div class="row">
-        <div class="col-auto">
+        <div class="col-auto p-0">
           <app-sidebar></app-sidebar>
         </div>
-        <div class="col-auto">
+        <div class="col p-0">
           <router-outlet></router-outlet>
         </div>
       </div>

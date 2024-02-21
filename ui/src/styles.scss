@@ -2,6 +2,9 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Kristi&display=swap");
 
+@import "src/styles/colors.scss";
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +15,7 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   font-variation-settings: "slnt" 0;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 ul {

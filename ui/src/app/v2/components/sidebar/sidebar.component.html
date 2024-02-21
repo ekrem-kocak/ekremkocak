@@ -8,13 +8,13 @@
 
   <ul class="navbar-nav-container">
     <li>
-      <a href="">Home</a>
+      <a routerLink="/">Home</a>
     </li>
     <li>
-      <a href="">About</a>
+      <a routerLink="/about">About</a>
     </li>
     <li>
-      <a href="">Blog</a>
+      <a routerLink="/blog">Blog</a>
     </li>
   </ul>
 
@@ -27,7 +27,8 @@
     <h6>
       Copyright © <span [innerText]="date | date : 'yyyy'"></span>
       <span class="d-none d-xl-inline-flex"
-        >Ekrem Koçak. <br class="d-xxl-none d-xl-inline-block d-none"> All rights reserved.</span
+        >Ekrem Koçak. <br class="d-xxl-none d-xl-inline-block d-none" />
+        All rights reserved.</span
       >
     </h6>
   </div>

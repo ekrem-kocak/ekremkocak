@@ -27,7 +27,6 @@ export class CursorComponent {
   onMouseEnter(event: MouseEvent) {
     let targetElement: HTMLElement | null = event.target as HTMLElement;
     while (targetElement) {
-      console.log("ekrem");
       if (
         targetElement instanceof HTMLAnchorElement ||
         targetElement instanceof HTMLButtonElement
