@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { Select, Store } from '@ngxs/store';
 import { MobileNavState } from '../../states/mobile-nav.state';
-import { Observable } from 'rxjs';
+import { Observable, Subject, filter, takeUntil } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { ToggleSidebar } from '../../actions/mobile-nav.actions';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-mobile-top-navbar',
@@ -22,13 +23,35 @@ import { ToggleSidebar } from '../../actions/mobile-nav.actions';
   `,
   styleUrl: './mobile-top-navbar.component.scss',
 })
-export class MobileTopNavbarComponent {
+export class MobileTopNavbarComponent implements OnDestroy {
   @Select(MobileNavState.getVisibility) visibility$:
     | Observable<boolean>
     | undefined;
 
-  constructor(private store: Store) {}
-  toggle() {
+  $destroy = new Subject<void>();
+
+  constructor(private store: Store, private router: Router) {
+    this.router.events
+      .pipe(
+        filter((event) => event instanceof NavigationEnd),
+        takeUntil(this.$destroy)
+      )
+      .subscribe({
+        next: (e) => {
+          const visibility = this.store.selectSnapshot(
+            MobileNavState.getVisibility
+          );
+          visibility && this.store.dispatch(new ToggleSidebar());
+        },
+      });
+  }
+
+  toggle(): void {
     this.store.dispatch(new ToggleSidebar());
+  }
+
+  ngOnDestroy(): void {
+    this.$destroy.next();
+    this.$destroy.complete();
   }
 }
