@@ -1,0 +1,28 @@
+@import "src/styles/breakpoints.scss";
+@import "src/styles/colors.scss";
+
+.mobile-nav-header {
+  padding: 0.5rem;
+  display: none;
+
+  h6 {
+    color: $primary;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  button {
+    i {
+      font-size: 1.5rem;
+    }
+    &:active {
+      border-color: transparent !important;
+    }
+  }
+
+  @media screen and (max-width: $xl) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

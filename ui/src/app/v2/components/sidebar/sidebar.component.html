@@ -1,0 +1,35 @@
+<nav [class]="(visibility$ | async) ? 'show' : ''">
+  <div class="navbar-brand-container">
+    <img class="img-fluid" src="/assets/images/ekremkocak.jpg" alt="" />
+    <div class="name-container mt-2">
+      <span class="name">Ekrem Koçak</span>
+    </div>
+  </div>
+
+  <ul class="navbar-nav-container">
+    <li>
+      <a routerLink="/">Home</a>
+    </li>
+    <li>
+      <a routerLink="/about">About</a>
+    </li>
+    <li>
+      <a routerLink="/blog">Blog</a>
+    </li>
+  </ul>
+
+  <div class="navbar-footer">
+    <ul>
+      <li *ngFor="let s of socialMedias">
+        <a [href]="s.url" target="_blank"><i [class]="s.icon"></i></a>
+      </li>
+    </ul>
+    <h6>
+      Copyright © <span [innerText]="date | date : 'yyyy'"></span>
+      <span class="d-none d-xl-inline-flex"
+        >Ekrem Koçak. <br class="d-xxl-none d-xl-inline-block d-none" />
+        All rights reserved.</span
+      >
+    </h6>
+  </div>
+</nav>
