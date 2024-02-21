@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomepageComponent } from './components/homepage/homepage.component';
+import { UnderCunstructionComponent } from '../shared/components/under-cunstruction/under-cunstruction.component';
 
 const routes: Routes = [
   {
@@ -9,7 +10,17 @@ const routes: Routes = [
       import('./components/layout/layout.component').then(
         (c) => c.LayoutComponent
       ),
-    children: [{ path: '', component: HomepageComponent }],
+    children: [
+      { path: '', component: HomepageComponent },
+      {
+        path: '**',
+        redirectTo: 'under-cunstruction',
+      },
+      {
+        path: 'under-cunstruction',
+        component: UnderCunstructionComponent,
+      },
+    ],
   },
 ];
 
