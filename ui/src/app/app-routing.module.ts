@@ -7,6 +7,14 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import('./v2/v2.module').then((m) => m.V2Module),
   },
+  {
+    path: 'blog',
+    loadChildren: () => import('./blog/blog.module').then((m) => m.BlogModule),
+  },
+  {
+    path: '**',
+    redirectTo: '',
+  },
 ];
 
 @NgModule({

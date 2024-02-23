@@ -10,17 +10,7 @@ const routes: Routes = [
       import('./components/layout/layout.component').then(
         (c) => c.LayoutComponent
       ),
-    children: [
-      { path: '', component: HomepageComponent },
-      {
-        path: '**',
-        redirectTo: 'under-cunstruction',
-      },
-      {
-        path: 'under-cunstruction',
-        component: UnderCunstructionComponent,
-      },
-    ],
+    children: [{ path: '', component: HomepageComponent }],
   },
 ];
 
