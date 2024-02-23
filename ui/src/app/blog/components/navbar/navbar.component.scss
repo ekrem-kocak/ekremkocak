@@ -1,0 +1,90 @@
+@import "src/styles/colors.scss";
+@import "src/styles/breakpoints.scss";
+
+nav {
+  padding: 1rem 0;
+  border-bottom: 1px solid $secondary;
+  .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .navbar-brand {
+      color: $primary;
+
+      font-weight: 700;
+      font-size: 1.2rem;
+      span {
+        color: $dark;
+      }
+    }
+
+    form {
+      position: relative;
+      width: 400px;
+
+      input {
+        border-radius: 24px;
+        font-size: 12px;
+        padding: 0.75rem;
+      }
+
+      button {
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 0;
+
+        i {
+          color: $primary;
+        }
+      }
+
+      @media screen and (max-width: $lg) {
+        flex-grow: 1;
+        margin: auto 2rem;
+        width: auto;
+      }
+
+      @media screen and (max-width: $sm) {
+        display: none !important;
+      }
+    }
+
+    .auth-btn {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      font-size: 700;
+      font-weight: 500;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.mobile-nav-container {
+  .toggle-btn {
+    &:active {
+      border-color: transparent !important;
+    }
+  }
+
+  .mobile-nav {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translate(250px, 100%);
+    padding: 1rem;
+    width: 250px;
+    z-index: 5;
+    border-left: 1px solid $secondary;
+
+    transition: all 0.4s ease-in-out;
+    &.show {
+      transform: translate(0px, 100%);
+    }
+  }
+}

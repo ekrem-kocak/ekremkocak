@@ -1,0 +1,16 @@
+@import "src/styles/breakpoints.scss";
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  form {
+    width: 50%;
+
+    @media screen and (max-width: $md) {
+      width: 80%;
+    }
+  }
+}
